@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Pagamento</title>
+    
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="cartao.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!--BS Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+   
+</head>
+<body>
+
+    <style>
+        .container {
+            background-color: rgb(255, 255, 255);
+            padding: 150px;
+            border-radius: 30px;
+        }
+    </style>
+
+
+    <div class="container mt-5 jumbotron">
+        <div class="row">
+            <div class="col-md-8">
+                <h1><b>Tela de Compra</b></h1>
+                <form action="">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="">Nome</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="">Sobrenome</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="form-group col-md-12">
+                            <label for="">Email</label>
+                            <input type="email" class="form-control">
+                        </div>
+
+                        <div class="form-group col-md-12">
+                            <label for="">Endereço</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="row"></div>
+
+                        <div class="form-group col-md-3">
+                            <label for="">CEP</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label for="">Estado</label>
+                            <select class="form-control">
+                                <option value="">Selecione</option>
+                                <option value="">RS</option>
+                                <option value="">SC</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label for="">País</label>
+                            <select class="form-control">
+                                <option value="">Selecione</option>
+                                <option value="">Brasil</option>
+                                <option value="">EUA</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-4">
+                <h4 class="d-flex justify-content-between">
+                    <span>Carrinho</span>
+                    <span class="badge bg-secondary">2</span>
+                </h4>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between">
+                        <div>
+                            <h6>Produto 01</h6>
+                        </div>
+                        <span>R$ 100,00</span>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between">
+                        <div>
+                            <h6>Produto 02</h6>
+                        </div>
+                        <span>R$ 200,00</span>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between">
+                        <div>
+                            <h6>Total</h6>
+                        </div>
+                        <span>R$ 300,00</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+
+
+
+
+    <!-- cadastro cartão -->
+    <div class="checkout-panel">
+        <div class="panel-body">
+            <h2 class="title">Cadastro de Cartão</h2>
+
+            <div class="payment-method">
+                <label for="card" class="method card">
+                    <div class="card-logos">
+                        <img src="https://designmodo.com/demo/checkout-panel/img/visa_logo.png" />
+                        <img src="https://designmodo.com/demo/checkout-panel/img/mastercard_logo.png" />
+                    </div>
+
+                    <div class="radio-input">
+                        <input id="card" type="radio" name="payment">
+                        R$100,00
+                    </div>
+                </label>
+
+                <label for="paypal" class="method paypal">
+                    <img src="https://designmodo.com/demo/checkout-panel/img/paypal_logo.png" />
+                    <div class="radio-input">
+                        <input id="paypal" type="radio" name="payment">
+                        R$ 100,00
+                    </div>
+                </label>
+            </div>
+
+            <div class="input-fields">
+                <div class="column-1">
+                    <label for="cardholder">Nome</label>
+                    <input type="text" id="cardholder" />
+
+                    <div class="small-inputs">
+                        <div>
+                            <label for="date">Data de Validade</label>
+                            <input type="date" id="date" />
+                        </div>
+
+                        <div>
+                            <label for="verification">CVV / CVC *</label>
+                            <input type="password" id="verification" />
+                        </div>
+                    </div>
+
+                </div>
+                <div class="column-2">
+                    <label for="cardnumber">Número do Cartão</label>
+                    <input type="number" id="cardnumber" />
+
+                    <span class="info">* CVV ou CVC é o código de segurança do cartão, número único de três dígitos no
+                        verso do seu cartão separado do seu número.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-footer">
+            <button class="btn back-btn">Voltar</button>
+            <button class="btn next-btn">Comprar</button>
+        </div>
+    </div>  
+    <br><br>
+
+
+
+ <!-- Rodapé -->
+    <footer>
+        <div class="boxs">
+            <h2>Inicio</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Promoções</a></li>
+            </ul>
+        </div>
+        <div class="boxs">
+            <h2>Informações</h2>
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Email</a></li>
+            </ul>
+        </div>
+        <div class="boxs">
+            <h2>Suporte</h2>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Telefone</a></li>
+                <li><a href="#">Chat</a></li>
+            </ul></div>
+        <div class="boxs">
+            <h2>Sobre nós</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nihil, reprehenderit accusamus tempora esse ipsum culpa odio excepturi eius est, repellat optio distinctio asperiores. Nesciunt deleniti impedit libero. Perspiciatis aperiam natus molestias, libero id in consequuntur, et hic ex, atque nihil quam voluptatem unde accusantium! Ad sapiente voluptatum iure? Libero!
+            </p>       
+        </div>
+    </footer>
+
+    <div class="footer">
+        <h2>LOGO</h2>
+        <div class="sociais">
+            <div class="social">
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+            <div class="social">
+                <a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+            </div>
+            <div class="social">
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!--SCRIPT-->
+    <script src="cartao.js"></script>
+    <script src="header.js"></script>
+
+</body>
+</html>
